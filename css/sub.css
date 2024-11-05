@@ -1,0 +1,910 @@
+@charset "utf-8";
+
+/*
+sub css : sub (about, product, cs) css
+최초 작성일: 2024.10.07
+최초 작성자: 남서연
+*/
+
+/*container*/
+#container {
+  padding: 150px 0;
+  background-color: #FFF6C6;
+  color: #333;
+  overflow: hidden;
+}
+
+#container > section {
+  margin: 0 5%;
+  padding: 80px 5%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 100px;
+}
+
+h2 {
+  font-family: 'LOTTERIACHAB',sans-serif;
+  font-size: 4.8rem;
+  -webkit-text-stroke: 1px #CF103E;
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 5px solid rgba(207, 16, 62, 0.7);
+  margin-bottom: 120px;
+}
+
+/*container tablet*/
+@media screen and (max-width : 1200px) {
+  #container {
+    padding: 100px 0;
+  }
+
+  #container > section {
+    padding: 60px 5%;
+    border-radius: 80px;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+    border-bottom: 2px solid rgba(207, 16, 62, 0.7);
+    margin-bottom: 80px;
+  }
+}
+
+/*container mobile*/
+@media screen and (max-width : 768px) {
+  #container {
+    padding: 40px 0;
+  }
+
+  #container > section {
+    margin: 0 3%;
+    padding: 25px 5%;
+    border-radius: 30px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 45px;
+  }
+}
+
+/*about.html*/
+
+/*about*/
+.about {
+  margin-bottom: 135px;
+}
+
+.wrap-box {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+#aboutus .img-box {
+  width: 515px;
+  height: 452px;
+}
+
+#aboutus .img-box img {
+  width: 100%;
+  border-radius: 20%;
+  border: 7px solid #CF103E;
+}
+
+#aboutus .txt-box h3 {
+  font-size: 2.4rem;
+  margin-bottom: 45px;
+  font-weight: 800;
+}
+
+#aboutus .txt-box p {
+  font-size: 2rem;
+  margin-bottom: 45px;
+}
+
+#aboutus .txt-box span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #CF103E;
+}
+
+/*about tablet*/
+@media screen and (max-width : 1200px) {
+  .about {
+    margin-bottom: 80px;
+  }
+
+  .wrap-box {
+    gap: 60px;
+  }
+
+  #aboutus .img-box {
+    width: 320px;
+    height: 281px;
+  }
+
+  #aboutus .txt-box h3 {
+    font-size: 1.6rem;
+  }
+
+  #aboutus .txt-box p {
+    font-size: 1.4rem;
+  }
+
+  #aboutus .txt-box span {
+    font-size: 1.4rem;
+  }
+}
+
+/*about mobile*/
+@media screen and (max-width : 768px) {
+  .about {
+    margin-bottom: 40px;
+  }
+  
+  .wrap-box {
+    display: block;
+    text-align: center;
+  }
+  
+  #aboutus .img-box {
+    width: 300px;
+    margin: 0 auto 30px;
+  }
+
+  #aboutus .txt-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  #aboutus .txt-box p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  #aboutus .txt-box p br {
+    display: none;
+  }
+
+  #aboutus .txt-box span {
+    font-size: 1.2rem;
+    padding: 0 20px;
+  }
+}
+
+/*story*/
+.story {
+  height: 657px;
+}
+
+.tap-wrap .story-tap-btn {
+  height: 80px;
+  background: url(../img/sub/aboutus/storyline.png)no-repeat center / contain;
+  margin-bottom: 90px;
+}
+
+.tap-wrap .story-tap-btn ul {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.tap-wrap .story-tap-btn ul li {
+  position: relative;
+  top: 50px;
+}
+
+.tap-wrap .story-tap-btn ul li:nth-child(2n) {
+  top: 90px;
+}
+
+.tap-wrap .story-tap-btn ul li::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 3px solid #F2BB33;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: border 0.5s;
+  cursor: pointer;
+}
+
+.tap-wrap .story-tap-btn ul li.active::before {
+  border: 3px solid #E84D7A;
+}
+
+.tap-wrap .story-tap-btn ul li:hover::before {
+  border: 3px solid #E84D7A;
+}
+
+.tap-wrap .story-tap-con ul {
+  position: relative;
+}
+
+.tap-wrap .story-tap-con ul li {
+  width: 100%;
+  height: 265px;
+  border: 7px solid #F2BB33;
+  background-color: #fff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: left;
+  gap: 110px;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-right: 5%;
+  overflow: hidden;
+}
+
+.tap-wrap .story-tap-con ul li dt {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.m-story {
+  display: none;
+}
+
+/*story tablet*/
+@media screen and (max-width : 1200px) {
+  .story {
+    height: 462px;
+  }
+
+  .tap-wrap .story-tap-btn {
+    margin-bottom: 65px;
+  }
+
+  .tap-wrap .story-tap-btn ul li {
+    top: 65px;
+  }
+
+  .tap-wrap .story-tap-btn ul li:nth-child(2n) {
+    top: 95px;
+  }
+
+  .tap-wrap .story-tap-btn ul li::before {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tap-wrap .story-tap-con ul li {
+    height: 181px;
+    gap: 70px;
+  }
+
+  .tap-wrap .story-tap-con ul li img {
+    width: 322px;
+    height: 181px;
+  }
+
+  .tap-wrap .story-tap-con ul li dt {
+    font-size: 1.6rem;
+  }
+
+  .tap-wrap .story-tap-con ul li dl {
+    font-size: 1.4rem;
+  }
+}
+
+/*story mobile*/
+@media screen and (max-width : 768px) {
+  .story {
+    height: 450px;
+  }
+
+  .tap-wrap {
+    display: none;
+  }
+
+  .m-story {
+    display: block;
+    width: 260px;
+  }
+
+  .m-story ul li {
+    height: 350px;
+    background-color: #fff;
+    border-radius: 30px;
+    border: 3px solid #F2BB33;
+    position: relative;
+  }
+
+  .m-story ul li img {
+    width: 100%;
+  }
+
+  .m-story ul li dl dt {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+    color: #fff;
+    font-weight: 800;
+  }
+
+  .m-story ul li dl dt span {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  .m-story ul li dl dd {
+    padding: 30px 20px;
+    font-size: 1.2rem;
+  }
+}
+
+/*cs.html*/
+
+/*qna*/
+#contact .qna h2 {
+  margin-bottom: 20px;
+  border-bottom: none;
+}
+
+.qna {
+  margin-bottom: 135px;
+}
+
+.q-list {
+  border-top: 5px solid rgba(207, 16, 62, 0.7);
+  border-bottom: 5px solid rgba(207, 16, 62, 0.7);
+}
+
+.q-list > li {
+  width: 100%;
+  padding: 35px 100px 35px 25px;
+  border-bottom: 2px solid rgba(207, 16, 62, 0.7);
+  font-family: "Jua";
+  font-size: 2.8rem;
+  padding-left: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.q-list > li:last-child {
+  border-bottom: none;
+}
+
+.q-list span {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  font-size: 0;
+  color: transparent;
+  background: url(../img/sub/contactus/btn.png) no-repeat center;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+}
+
+.q-list span.active {
+  transform: rotate(180deg);
+}
+
+.a-list {
+  font-family: "NPSfont";
+  font-size: 2rem;
+  padding: 35px 150px 50px 90px;
+}
+
+/*qna tablet*/
+@media screen and (max-width : 1200px) {
+  .qna {
+    margin-bottom: 65px;
+  }
+
+  .q-list > li {
+    padding: 25px 100px 25px 25px;
+    font-size: 2.4rem;
+  }
+
+  .q-list span {
+    top: 20px;
+    background: url(../img/sub/contactus/btn2.png) no-repeat center;
+  }
+
+  .a-list {
+    font-size: 1.8rem;
+    padding: 20px 100px 30px 50px;
+  }
+}
+
+/*qna mobile*/
+@media screen and (max-width : 768px) {
+  .qna {
+    margin-bottom: 40px;
+  }
+
+  .q-list {
+    border-top: 3px solid rgba(207, 16, 62, 0.7);
+    border-bottom: 3px solid rgba(207, 16, 62, 0.7);
+  }
+
+  .q-list > li {
+    padding: 15px 50px 15px 10px;
+    font-size: 1.8rem;
+  }
+
+  .q-list span {
+    top: 5px;
+    right: 0;
+  }
+
+  .a-list {
+    font-size: 1.4rem;
+    padding: 15px;
+  }
+}
+
+/*contactus*/
+.contactus h2 {
+  margin-bottom: 70px;
+}
+
+.contactus form fieldset > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactus .address .wrap-box {
+  width: calc((100% - 80px) / 2);
+  gap: 25px;
+}
+
+.contactus .address .wrap-box input[type="text"] {
+  width: calc((100% - 25px) / 2);
+}
+
+.contactus input[type="text"] {
+  border: 5px solid rgba(246, 200, 77, 0.6);
+  width: calc((100% - 80px) / 2);
+  height: 80px;
+  border-radius: 50px;
+  padding-left: 35px;
+  margin-bottom: 40px;
+  position: relative;
+  font-family: "Jua";
+  font-size: 2.8rem;
+}
+
+.contactus .message input[type="text"] {
+  width: 100%;
+  height: 150px;
+}
+
+.contactus input[type="text"]::placeholder {
+  color: #333;
+  position: absolute;
+  top: 20px;
+}
+
+#upload {
+  width: 100%;
+  height: 80px;
+  border-radius: 50px;
+  background-color: #E84D7A;
+  color: #fff;
+  border: 0;
+  font-family: "Jua";
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.contactus input[type="checkbox"] {
+  display: none;
+}
+
+.contactus input[type="checkbox"] + label {
+  width: 35px;
+  height: 35px;
+  border: 3px solid rgba(207, 16, 62, 0.7);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.consent-check {
+  position: relative;
+}
+
+.contactus input[type="checkbox"] + label p {
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: 55px;
+  font-size: 2rem;
+  color: #CF103E;
+}
+
+.contactus input[type="checkbox"]:checked + label::before {
+  content:'✔';
+  font-size: 25px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top:0;
+  background-color: #E84D7A;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.contactus input[type="checkbox"] + label p span a {
+  text-decoration: underline;
+  color: #CF103E;
+}
+
+.contactus .text {
+  font-size: 2rem;
+  margin: 30px 0;
+}
+
+#send {
+  width: 150px;
+  height: 70px;
+  border-radius: 30px;
+  background-color: #c1c1c1;
+  font-family: "Jua";
+  font-size: 2.8rem;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  float: right;
+}
+
+#send:hover {
+  background-color: #E84D7A;
+}
+
+/*contactus tablet*/
+@media screen and (max-width : 1200px) {
+  .contactus input[type="text"] {
+    width: calc((100% - 50px) / 2);
+    height: 60px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    font-size: 2.4rem;
+  }
+
+  .contactus .address .wrap-box {
+    width: calc((100% - 50px) / 2);
+    gap: 20px;
+  }
+
+  .contactus .message input[type="text"] {
+    height: 120px;
+  }
+
+  .contactus input[type="text"]::placeholder {
+    top: 10px;
+  }
+
+  #upload {
+    height: 60px;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+  }
+
+  .contactus input[type="checkbox"] + label {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contactus input[type="checkbox"] + label p {
+    font-size: 1.8rem;
+    left: 45px;
+  }
+
+  .contactus input[type="checkbox"]:checked + label::before {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .contactus .text {
+    font-size: 1.8rem;
+    margin: 15px 0;
+  }
+}
+
+/*contactus mobile*/
+@media screen and (max-width : 768px) {
+  .contactus h2 {
+    margin-bottom: 35px;
+  }
+
+  .contactus form fieldset > div {
+    flex-direction: column;
+  }
+
+  .contactus input[type="text"] {
+    width: 100%;
+    height: 40px;
+    border: 3px solid rgba(246, 200, 77, 0.6);
+    margin-bottom: 15px;
+    padding-left: 20px;
+    font-size: 1.8rem;
+  }
+
+  .contactus .address .wrap-box {
+    width: 100%;
+  }
+
+  .contactus .address .wrap-box input[type="text"] {
+    width: 100%;
+  }
+
+  .contactus input[type="text"]::placeholder {
+    top: 8px;
+  }
+
+  #upload {
+    height: 40px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .contactus input[type="checkbox"] + label {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contactus input[type="checkbox"] + label p {
+    font-size: 1.4rem;
+    left: 40px;
+  }
+
+  .contactus input[type="checkbox"]:checked + label::before {
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+  }
+
+  .contactus .text {
+    font-size: 1.4rem;
+  }
+
+  #send {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1.8rem;
+  }
+}
+
+/*products.html*/
+.candy, .jelly, .soda {
+  display: flex;
+  height: 500px;
+  border-radius: 50px;
+  border: 7px solid #F2BB33;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.candy1, .jelly1, .soda1 {
+  width: 500px;
+  position: relative;
+  background-color: #fff;
+}
+
+.candy1 img, .jelly1 img, .soda1 img {
+  width: 100%;
+}
+
+.info {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.candy2, .jelly2, .soda2 {
+  width: calc(100% - 500px);
+  padding-top: 100px;
+  text-align: center;
+  position: relative;
+  background-color: #FFF6C6;
+  z-index: 9;
+}
+
+.candy2 li, .jelly2 li, .soda2 li {
+  width: 100%;
+  height: 400px;
+  background-color: #FFF6C6;
+}
+
+#products h3 {
+  font-family: "Jua";
+  font-size: 2.8rem;
+  color: #222;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+#products h3 span {
+  display: block;
+  font-size: 4rem;
+  color: #CF103E;
+}
+
+.candy2 .img-box {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.candy2 .img-box img {
+  width: 100%;
+}
+
+.txt-box {
+  margin-top: 45px;
+}
+
+.txt-box p {
+  font-size: 2.4rem;
+}
+
+.shop {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  cursor: pointer;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: #CF103E;
+  transform: scale(0.7);
+}
+
+.modal {
+  position: absolute;
+  justify-content: center;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.modal h4 {
+  display: none;
+}
+
+.modal-wrap {
+  width: 70%;
+  margin: 30px auto;
+}
+
+.modal-wrap img {
+  height: 100%;
+}
+
+.modal .close {
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+/*products tablet*/
+@media screen and (max-width : 1200px) {
+  .candy, .jelly, .soda {
+    height: 300px;
+    border-radius: 30px;
+    border: 5px solid #F2BB33;
+    margin-bottom: 80px;
+  }
+
+  .candy1, .jelly1, .soda1 {
+    width: 300px;
+  }
+
+  .candy2 li, .jelly2 li, .soda2 li {
+    height: 240px;
+  }
+
+  .info {
+    transform: scale(70%);
+    top: 20px;
+    right: 20px;
+  }
+
+  .candy2, .jelly2, .soda2 {
+    width: calc(100% - 300px);
+    padding-top: 60px;
+  }
+
+  #products h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  #products h3 span {
+    font-size: 2.8rem;
+  }
+
+  .candy2 .img-box {
+    height: 100px;
+  }
+
+  .txt-box {
+    margin-top: 25px;
+  }
+
+  .txt-box p {
+    font-size: 1.6rem;
+  }
+
+  .shop {
+    transform: scale(60%);
+    right: 30px;
+    bottom: 30px;
+  }
+
+  .modal-wrap {
+    width: 60%;
+  }
+
+  .modal .close {
+    top: 30px;
+    right: 30px;
+  }
+}
+
+/*products mobile*/
+@media screen and (max-width : 768px) {
+  .candy, .jelly, .soda {
+    width: 300px;
+    height: 550px;
+    display: block;
+    margin: 0 auto 40px;
+  }
+
+  .candy2, .jelly2, .soda2 {
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+  }
+
+  .candy2 li, .jelly2 li, .soda2 li {
+    height: 200px;
+  }
+
+  #products h3 {
+    font-size: 1.6rem;
+  }
+
+  #products h3 span {
+    font-size: 2.4rem;
+  }
+
+  .candy2 .img-box {
+    width: 80%;
+  }
+
+  .txt-box p {
+    font-size: 1.2rem;
+  }
+
+  .shop {
+    transform: scale(50%);
+    right: 5px;
+    bottom: 5px;
+  }
+}

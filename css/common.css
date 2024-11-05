@@ -1,0 +1,389 @@
+@charset "utf-8";
+
+/*
+common css: 공통 css, header&footer css
+최초 작성일: 2024.09.30
+최초 작성자: 남서연
+*/
+
+/*공통 css*/
+#wrap {
+  min-width: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 1400px;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+.cursor {
+  position: absolute;
+  z-index: 9999;
+}
+
+canvas.overlay-canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  pointer-events: none;
+  z-index:9999;
+}
+
+@media screen and (max-width : 1200px) {
+  .cursor,
+  canvas.overlay-canvas {
+    display: none;
+  }
+}
+
+/*header*/
+header {
+  padding: 45px 0;
+  background-color: #CF103E;
+  font-family: "Jua";
+}
+
+header .inner {
+  position: relative;
+}
+
+nav {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.gnb {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.gnb li a {
+  font-size: 2rem;
+  color: #222;
+  transition: color 0.5s;
+}
+
+.gnb li:hover a {
+  color: #CF103E;
+}
+
+.gnb li a span {
+  font-size: 2rem;
+}
+
+.mgnb-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #E84D7A url(../img/common/character.png)no-repeat right 10% bottom 100px;
+  padding: 90px 50px;
+  z-index: 999;
+}
+
+.mgnb-wrap li {
+  margin-bottom: 15px;
+}
+
+.mgnb-wrap li a {
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.mgnb-wrap li:last-child a {
+  color: #CF103E;
+}
+
+.mgnb-close {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #CF103E;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top: 40px;
+  right: 10%;
+  cursor: pointer;
+}
+
+.mgnb-wrap {
+  display: none;
+}
+
+.btn-search {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.m-logo, .ham {
+  display: none;
+}
+
+h1:hover img {
+  animation: rotate 1s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* search */
+.search {
+  position: absolute;
+  left: 0;
+  top: 130px;
+  width: 100%;
+  border-radius: 0 0 50px 50px;
+  background-color: #FFF6C6;
+  text-align: center;
+  padding: 90px 0 50px;
+  z-index: 100;
+}
+
+.search .input-box {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid #CF103E;
+  overflow: hidden;
+  width: 50%;
+  min-width: 300px;
+}
+
+.search input[type="text"] {
+  font-family: 'Jua', sans-serif;
+  background-color: transparent;
+  width: calc(100% - 60px);
+  height: 60px;
+  font-size: 2rem;
+  padding: 0 20px;
+}
+
+.search ::placeholder {
+  color: #F2BB33;
+}
+
+.search button {
+  background-color: transparent;
+  color: #CF103E;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 0;
+  transform: translatey(7px);
+}
+
+.search-close {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #CF103E;
+  color: #fff;
+  line-height: 65px;
+  transform: translateY(80px);
+  text-align: center;
+  cursor: pointer;
+}
+
+.dim {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  top: 130px;
+}
+
+.search {
+  display: none;
+}
+
+/*header tablet*/
+@media screen and (max-width : 1200px) {
+  header {
+    padding: 40px 0;
+  }
+
+  nav {
+    width: 80%;
+  }
+
+  .gnb li a {
+    font-size: 1.8rem;
+  }
+
+  .search {
+    top: 120px;
+    padding: 70px 0 30px;
+  }
+
+  .search-close {
+    transform: translateY(55px);
+  }
+}
+
+/*header mobile*/
+@media screen and (max-width : 768px) {
+  header {
+    padding: 10px 0;
+  }
+
+  .gnb {
+    display: none;
+  }
+
+  .m-logo {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  .m-logo img {
+    width: 100%;
+  }
+
+  .ham {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .search {
+    top: 60px;
+    padding: 55px 0 20px;
+  }
+
+  .search-close {
+    transform: translateY(50px);
+  }
+}
+
+/*footer*/
+footer {
+  padding: 100px 0 150px 0;
+  background: #FF9CB4 url(../img/common/f-bg.png) no-repeat right bottom;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+footer .copy {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+footer .copy a {
+  color: #fff;
+  border-left: 1px solid #fff;
+  padding-left: 40px;
+  transition: color 0.5s;
+}
+
+footer .copy a:hover {
+  color: #CF103E;
+}
+
+footer .cs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer .time {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer .f-bottom {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #FFEEF2;
+  border-top: 2px solid #CF103E;
+  font-size: 3.2rem;
+  font-family: "Jua";
+  color: #CF103E;
+}
+
+/*footer tablet*/
+@media screen and (max-width : 1200px) {
+  footer {
+    padding: 85px 0 120px;
+    font-size: 1.6rem;
+    background: #FF9CB4 url(../img/common/f-bg2.png) no-repeat right bottom;
+  }
+
+  footer .f-bottom {
+    font-size: 2rem;
+  }
+}
+
+/*footer mobile*/
+@media screen and (max-width : 768px) {
+  footer {
+    padding: 30px 0 55px 0;
+    font-size: 1.2rem;
+    background: #FF9CB4 url(../img/common/f-bg3.png) no-repeat right bottom;
+  }
+
+  footer .copy {
+    justify-content: left;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  footer .copy a {
+    padding-left: 15px;
+  }
+
+  footer .cs,
+  footer .time {
+    display: block;
+    text-align: left;
+  }
+
+  footer .cs li {
+    margin-bottom: 5px;
+  }
+
+  footer .time li:first-child {
+    margin-bottom: 5px;
+  }
+
+  footer .f-bottom {
+    font-size: 1.2rem;
+  }
+}
